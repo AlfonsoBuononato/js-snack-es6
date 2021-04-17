@@ -45,7 +45,7 @@ $(document).ready(function(){
     Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console. */
 
     //CREO ARRAY DI OGGI CONTENENTE DATI DI SQUADRE DI CALCIO 
-
+/* 
     const squadre = [
         {
             nome: "Caivanese",
@@ -78,14 +78,103 @@ $(document).ready(function(){
     console.log(squadraNuova);
     
 
-
+     */
     /* 
     * UTILITIES FUNCTION
     */
 
+   /* 
     function numeriRandom(min, max){
         return Math.floor(Math.random() * (max - min +1) + min);
+    } */
+
+
+
+   /*  jsnack 3
+    Si scriva una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
+    La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri
+    inseriti dall'utente (è possibile usare, ad esempio, for/foreach/filter
+    */
+    
+        
+    /*     const nomi = ["alfonso", "nicola", "peppe", "pasquale", "francesco", "giacomo"];
+    
+    console.log(nomi);
+    let a = parseInt(prompt("inserisci un numero"));
+
+    while(isNaN(a) || a > 5){
+        a = parseInt(prompt("Devi inserire un numero tra 0 e 5"));
     }
+
+    let b = parseInt(prompt("inserisci un altro numero"));
+    while(isNaN(a) || a > b || b > 5){
+        b = parseInt(prompt("Devi inserire un numero tra 0 e 5 piu grande del numero a"));
+    }
+
+    const newArray = array(nomi, a, b);
+    console.log(newArray); */
+    
+    /* 
+    * UTILITIES FUNCTION PER ESERCITARMI PROVO CON FILTER
+    */
+    //FUNZIONE CON FILTER
+    /*     function array(arr, num1, num2){
+
+        let newArray = arr.filter( (element, index) => {
+            return num1 <= index && num2 >= index;
+        })
+
+        return newArray
+    } */
+
+ /*    jsnack 4
+    Dato un'array con dei capi d'abbigliamento - oggetti che contengono informazioni su nome modello, tipologia e colore - si aggiunga a ciascun elemento una ulteriore proprietà che indichi il costo del prodotto.
+    Per inserire il costo del singolo prodotto si scriva una funzione che generi un numero random da 10 a 50 (potete sfruttare il map per aggiungere la nuova proprietà) */
+
+    const abbigliamento = [
+        {
+            nomeModello: "camicia mezze maniche",
+            modello: "camicie",
+            colore: "blu",
+        },
+        {
+            nomeModello: "camicia mezze maniche",
+            modello: "camicie",
+            colore: "blu",
+        },
+        {
+            nomeModello: "camicia mezze maniche",
+            modello: "camicie",
+            colore: "blu",
+        },
+        {
+            nomeModello: "camicia mezze maniche",
+            modello: "camicie",
+            colore: "blu",
+        },
+    ];
+    
+    abbigliamento.forEach((element) =>{
+        element.prezzo = genRandom(10, 50);
+    })
+ 
+    console.log(abbigliamento);
+
+
+    /* 
+    * UTILITIES FUNCTION PER ESERCITARMI PROVO CON FILTER
+    */
+    //FUNZIONE CON FOREACH
+  /*   function array(arr, num1, num2){
+    } */
+    
+    function genRandom(min, max){
+        return Math.floor((Math.random()* max - min + 1 ) + min);
+    }
+
+
+
+
 
 
     //end doc ready
